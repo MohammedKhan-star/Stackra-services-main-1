@@ -199,59 +199,7 @@ export default function AboutSection() {
           </div>
 
           {/* Company Identity Card */}
-          <div className="relative">
-
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 p-7 text-white shadow-2xl sm:p-9">
-
-              <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-blue-600/20 blur-3xl" />
-              <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl" />
-
-              <div className="relative">
-
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-cyan-400 ring-1 ring-white/10">
-                  <Building2 size={28} />
-                </div>
-
-                <p className="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-cyan-400">
-                  STACKRA TECHNOLOGIES
-                </p>
-
-                <h3 className="mt-3 text-3xl font-bold">
-                  Software.
-                  <br />
-                  AI.
-                  <br />
-                  Digital Innovation.
-                </h3>
-
-                <p className="mt-6 leading-7 text-slate-400">
-                  We help businesses move from manual processes and fragmented
-                  systems toward modern, connected, and scalable technology.
-                </p>
-
-                <div className="mt-8 grid grid-cols-2 gap-3">
-
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-2xl font-bold text-white">10+</p>
-                    <p className="mt-1 text-xs text-slate-400">
-                      Digital Projects
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-2xl font-bold text-white">20+</p>
-                    <p className="mt-1 text-xs text-slate-400">
-                      Technologies
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
+    
 
         </div>
 

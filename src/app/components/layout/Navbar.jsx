@@ -20,7 +20,7 @@ import {
 const navLinks = [
   {
     name: "Home",
-    href: "#home",
+    href: "#",
   },
   {
     name: "About",
@@ -35,8 +35,8 @@ const navLinks = [
     href: "#technologies",
   },
   {
-    name: "Projects",
-    href: "#projects",
+    name: "Videos",
+    href: "#videos",
   },
 ];
 
