@@ -47,7 +47,7 @@ export default function HeroSection() {
       {/* =========================================================
           HERO CONTENT
       ========================================================= */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-24 pt-32 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-24 pt-20 lg:px-8">
         <div className="w-full">
 
           {/* =====================================================

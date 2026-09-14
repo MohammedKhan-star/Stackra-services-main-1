@@ -10,7 +10,7 @@ title: "STACKRA AI",
 category: "AI Business Management Platform",
 description:
 "An intelligent business management platform designed to help organizations manage customers, sales, finance, projects, operations, and AI-powered workflows from one place.",
-image: "/projects/stackra-ai.jpg",
+image: "/services/stackraai.png",
 technologies: ["Next.js", "MongoDB", "AI"],
     status: "In Development",
 },
@@ -19,7 +19,7 @@ title: "Business Management System",
 category: "Custom Software",
 description:
 "A centralized platform for managing customers, employees, invoices, projects, sales, and business operations efficiently.",
-image: "/projects/business-management.jpg",
+image: "/services/businesslanding.png",
 technologies: ["Next.js", "Node.js", "MongoDB"],
 },
 {
@@ -27,7 +27,7 @@ title: "AI Invoice & Billing System",
 category: "AI & SaaS",
 description:
 "A smart invoicing platform that helps businesses generate invoices, manage payments, track customers, and automate billing workflows.",
-image: "/projects/ai-invoice.jpg",
+image: "/services/ai-invoice-billing.png",
 technologies: ["AI", "Razorpay", "MongoDB"],
     status: "In Development",
 },
@@ -36,7 +36,7 @@ title: "School Management Platform",
 category: "Education Technology",
 description:
 "A digital platform for managing students, admissions, attendance, fees, results, teachers, and school administration.",
-image: "/projects/school-management.jpg",
+image: "/services/school.png",
 technologies: ["Next.js", "Database", "Dashboard"],
 },
 {
@@ -44,7 +44,7 @@ title: "Restaurant Digital Platform",
 category: "Web Application",
 description:
 "A modern digital solution for restaurants featuring online menus, table booking, ordering, customer management, and business analytics.",
-image: "/projects/restaurant.jpg",
+image: "/services/food.png",
 technologies: ["Web", "Payments", "Analytics"],
 },
 {
@@ -52,7 +52,7 @@ title: "Custom Business Website",
 category: "Web Development",
 description:
 "High-performance, modern websites designed to build strong digital presence and generate leads for businesses.",
-image: "/projects/business-website.jpg",
+image: "/services/businesslanding.png",
 technologies: ["Next.js", "SEO", "UI/UX"],
 },
 ];
@@ -156,7 +156,7 @@ return ( <section className="py-28 bg-white"> <div className="max-w-7xl mx-auto 
       </p>
 
       <Link
-        href="/contact"
+        href="https://www.stackratechnologies.com/#contact"
         className="inline-flex items-center gap-2 mt-7 px-7 py-4 rounded-xl bg-indigo-600 text-white font-semibold transition hover:bg-indigo-700"
       >
         Start Your Project
