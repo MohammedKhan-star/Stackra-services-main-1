@@ -10,6 +10,7 @@ import ProjectsSection from "./components/sections/ProjectsSection";
 import ProcessSection from "./components/sections/ProcessSection";
 import FaqSection from "./components/sections/FaqSection";
 import ContactForm from "./components/sections/ContactForm";
+import VideosSection from "./components/sections/VideosSection";
 
 import WhatsAppButton from "./components/ui/WhatsAppButton";
 
@@ -27,7 +28,9 @@ export default function Home() {
       <ServicesSection />
       <WhyChooseUsSection />
       <TechnologyStackSection />
+      <VideosSection />
       <ProjectsSection />
+
 
       {/* How We Work */}
       <ProcessSection />
