@@ -42,18 +42,6 @@ const navLinks = [
 
 const ecosystemLinks = [
   {
-    name: "STACKRA WebApp",
-    description: "Smart business software & digital platforms",
-    href: "/webapp",
-    icon: MonitorSmartphone,
-  },
-  {
-    name: "STACKRA AI",
-    description: "Intelligent AI-powered technology solutions",
-    href: "/ai",
-    icon: BrainCircuit,
-  },
-  {
     name: "STACKRA Academy",
     description: "Learn technology and build future skills",
     href: "/academy",
@@ -65,6 +53,19 @@ const ecosystemLinks = [
     href: "/books",
     icon: BookOpen,
   },
+  {
+    name: "STACKRA WebApp",
+    description: "Smart business software & digital platforms",
+    href: "/webapp",
+    icon: MonitorSmartphone,
+  },
+  {
+    name: "STACKRA AI",
+    description: "Intelligent AI-powered technology solutions",
+    href: "/ai",
+    icon: BrainCircuit,
+  },
+  
   {
     name: "STACKRA Blogs",
     description: "Technology insights, ideas & industry updates",

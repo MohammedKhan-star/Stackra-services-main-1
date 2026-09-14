@@ -543,45 +543,7 @@ export default function VideosSection() {
             INSTAGRAM
             ================================================= */}
 
-        <div className="mt-20">
-          <div className="mb-8 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-50 text-pink-600">
-                <Instagram size={21} />
-              </div>
-
-              <div>
-                <h3 className="text-xl font-black text-slate-950">
-                  Instagram Reels
-                </h3>
-
-                <p className="text-sm text-slate-500">
-                  Real STACKRA Instagram previews
-                </p>
-              </div>
-            </div>
-
-            <a
-              href="https://www.instagram.com/stackra_technologies"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden items-center gap-2 text-sm font-black text-slate-900 transition-colors hover:text-pink-600 sm:flex"
-            >
-              Visit Instagram
-              <ExternalLink size={15} />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {instagramVideos.map((video) => (
-              <InstagramCard
-                key={video.id}
-                video={video}
-                mounted={mounted}
-              />
-            ))}
-          </div>
-        </div>
+    
 
         {/* =================================================
             SOCIAL CTA

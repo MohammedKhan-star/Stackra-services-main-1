@@ -18,81 +18,106 @@ import WhatsAppButton from "./components/ui/WhatsAppButton";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      {/* ================================
+
+      {/* =========================================
           GLOBAL NAVIGATION
-      ================================= */}
+      ========================================= */}
       <Navbar />
 
-      {/* ================================
-          01. HERO
-          First impression + positioning
-      ================================= */}
-      <HeroSection />
+      {/* =========================================
+          HERO
+      ========================================= */}
+      <section id="home" className="scroll-mt-24">
+        <HeroSection />
+      </section>
 
-      {/* ================================
-          02. ABOUT STACKRA
-          Who we are + what we do
-      ================================= */}
-      <AboutSection />
+      {/* =========================================
+          ABOUT
+      ========================================= */}
+      <section id="about" className="scroll-mt-24">
+        <AboutSection />
+      </section>
+
+      {/* =========================================
+          SOLUTIONS
+      ========================================= */}
       <SolutionsSection />
 
-      {/* ================================
-          03. CORE SERVICES
-          What businesses can get from us
-      ================================= */}
-      <ServicesSection />
+      {/* =========================================
+          SERVICES
+      ========================================= */}
+      <section
+        id="services"
+        className="scroll-mt-24"
+      >
+        <ServicesSection />
+      </section>
 
-      {/* ================================
-          04. WHY STACKRA
-          Differentiation + trust
-      ================================= */}
+      {/* =========================================
+          WHY CHOOSE STACKRA
+      ========================================= */}
       <WhyChooseUsSection />
 
-      {/* ================================
-          05. TECHNOLOGY
-          Technology supporting our solutions
-      ================================= */}
-      <TechnologyStackSection />
+      {/* =========================================
+          TECHNOLOGY
+      ========================================= */}
+      <section
+        id="technologies"
+        className="scroll-mt-24"
+      >
+        <TechnologyStackSection />
+      </section>
 
-      {/* ================================
-          06. PROJECTS / CASE STUDIES
-          Proof of what we build
-      ================================= */}
+      {/* =========================================
+          PROJECTS
+      ========================================= */}
       <ProjectsSection />
 
-      {/* ================================
-          07. HOW WE WORK
-          Discovery → Design → Development → Launch
-      ================================= */}
+      {/* =========================================
+          PROCESS
+      ========================================= */}
       <ProcessSection />
 
-      {/* ================================
-          08. SOCIAL / VIDEO CONTENT
-          YouTube + Instagram + company media
-      ================================= */}
-      <VideosSection />
+      {/* =========================================
+          VIDEOS
+      ========================================= */}
+      <section
+        id="videos"
+        className="scroll-mt-24"
+      >
+        <VideosSection />
+      </section>
 
-      {/* ================================
-          09. FAQ
-          Remove objections and answer questions
-      ================================= */}
-      <FaqSection />
+      {/* =========================================
+          FAQ
+      ========================================= */}
+      <section
+        id="faq"
+        className="scroll-mt-24"
+      >
+        <FaqSection />
+      </section>
 
-      {/* ================================
-          10. CONTACT / CONVERSION
-          Final CTA
-      ================================= */}
-      <ContactForm />
+      {/* =========================================
+          CONTACT
+      ========================================= */}
+      <section
+        id="contact"
+        className="scroll-mt-24"
+      >
+        <ContactForm />
+      </section>
 
-      {/* ================================
+      {/* =========================================
           FLOATING WHATSAPP
-      ================================= */}
+      ========================================= */}
       <WhatsAppButton />
 
-      {/* ================================
+      {/* =========================================
           FOOTER
-      ================================= */}
+      ========================================= */}
       <Footer />
+
     </main>
   );
 }
