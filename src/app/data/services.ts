@@ -30,7 +30,7 @@ const services = [
 
   {
     title: "Business & Corporate Websites",
-    image: "/services/business.jpg",
+    image: "/services/businesslanding.png",
     desc: "Professional corporate websites designed to build trust, generate leads, and convert visitors into customers.",
     points: [
       "Premium UI/UX Design",
@@ -44,7 +44,7 @@ const services = [
 
   {
     title: "Education Technology Solutions",
-    image: "/services/education.jpg",
+    image: "/services/school.png",
     desc: "Smart digital platforms for schools, colleges, coaching institutes, and educational organizations.",
     points: [
       "School Management Systems",
@@ -58,7 +58,7 @@ const services = [
 
   {
     title: "Learning Management System",
-    image: "/services/lms.jpg",
+    image: "/services/LMS.png",
     desc: "Complete online learning platforms that help institutions, trainers, and businesses deliver and manage digital education.",
     points: [
       "Course Management",
@@ -72,7 +72,7 @@ const services = [
 
   {
     title: "Restaurant & Food Solutions",
-    image: "/services/restaurant.jpg",
+    image: "/services/food.png",
     desc: "Digital solutions for restaurants and food businesses with menus, ordering, bookings, and customer engagement.",
     points: [
       "Digital Menu System",
@@ -86,7 +86,7 @@ const services = [
 
   {
     title: "E-Commerce Solutions",
-    image: "/services/ecommerce.jpg",
+    image: "/services/e-commerce.png",
     desc: "Complete online commerce platforms that help businesses sell products and manage orders, inventory, and customers.",
     points: [
       "Online Store Development",
@@ -98,23 +98,10 @@ const services = [
     ],
   },
 
-  {
-    title: "Custom Software Development",
-    image: "/services/custom-software.jpg",
-    desc: "Powerful custom software solutions designed around your business requirements, workflows, and operations.",
-    points: [
-      "Business Management Systems",
-      "Custom Applications",
-      "Admin Dashboards",
-      "Workflow Automation",
-      "Secure Authentication",
-      "Cloud Deployment",
-    ],
-  },
 
   {
     title: "CRM Solutions",
-    image: "/services/crm.jpg",
+    image: "/services/CRM.png",
     desc: "Customer Relationship Management systems that help businesses manage leads, customers, sales, communication, and relationships.",
     points: [
       "Lead Management",
@@ -128,7 +115,7 @@ const services = [
 
   {
     title: "ERP Solutions",
-    image: "/services/erp.jpg",
+    image: "/services/ERP.png",
     desc: "Integrated Enterprise Resource Planning systems that connect business operations, finance, inventory, sales, and workforce management.",
     points: [
       "Finance & Accounting",
@@ -142,7 +129,7 @@ const services = [
 
   {
     title: "Project Management System",
-    image: "/services/project-management.jpg",
+    image: "/services/project-management.png",
     desc: "Powerful project management platforms that help teams plan, track, collaborate, and deliver projects efficiently.",
     points: [
       "Project Planning",
@@ -154,19 +141,6 @@ const services = [
     ],
   },
 
-  {
-    title: "SaaS Product Development",
-    image: "/services/saas-development.jpg",
-    desc: "Scalable Software-as-a-Service platforms designed for startups and businesses using modern cloud technology.",
-    points: [
-      "Multi-User Platforms",
-      "Subscription Systems",
-      "Cloud Deployment",
-      "Secure Authentication",
-      "Admin Dashboards",
-      "Scalable Architecture",
-    ],
-  },
 ];
 
 export default services;
