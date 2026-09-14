@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
 ArrowRight,
 ArrowUpRight,
@@ -99,10 +99,10 @@ const founderHighlights = [
 ];
 
 /* =========================================================
-ANIMATION VARIANTS
+FRAMER MOTION VARIANTS
 ========================================================= */
 
-const containerVariants = {
+const containerVariants: Variants = {
 hidden: {},
 visible: {
 transition: {
@@ -111,17 +111,18 @@ staggerChildren: 0.08,
 },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
 hidden: {
 opacity: 0,
 y: 35,
 },
+
 visible: {
 opacity: 1,
 y: 0,
 transition: {
 duration: 0.65,
-ease: [0.22, 1, 0.36, 1],
+ease: "easeOut",
 },
 },
 };
@@ -752,6 +753,7 @@ BACKGROUND
 
   </div>
 </section>
+
 
 );
 }
