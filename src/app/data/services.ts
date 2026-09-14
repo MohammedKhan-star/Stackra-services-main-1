@@ -326,7 +326,7 @@ const services = [
     shortTitle: "Enterprise Resource Planning",
     title: "ERP Solutions",
     icon: "Boxes",
-    image: "/services/ERP.png",
+    image: "/services/erp.png",
     featured: true,
 
     desc: "Integrated ERP systems that connect finance, inventory, sales, purchasing, employees, and business operations into a centralized management platform.",
