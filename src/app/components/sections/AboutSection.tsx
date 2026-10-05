@@ -111,7 +111,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -123,6 +123,7 @@ export default function AboutSection() {
       className="relative overflow-hidden bg-[#05050d] py-24 text-white sm:py-28 lg:py-36"
     >
       {/* Ambient Royal Glows */}
+
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[8%] top-[8%] h-72 w-72 rounded-full bg-amber-500/10 blur-[120px]" />
         <div className="absolute right-[5%] top-[28%] h-96 w-96 rounded-full bg-purple-700/10 blur-[150px]" />
@@ -130,6 +131,7 @@ export default function AboutSection() {
       </div>
 
       {/* Luxury Grid */}
+
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
@@ -140,9 +142,8 @@ export default function AboutSection() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* ========================================================= */}
+
         {/* HEADER */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -172,12 +173,12 @@ export default function AboutSection() {
           </p>
         </motion.div>
 
-        {/* ========================================================= */}
         {/* STORY + ESTABLISHMENT */}
-        {/* ========================================================= */}
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+
           {/* Story */}
+
           <motion.div
             initial={{ opacity: 0, x: -35 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -246,6 +247,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Establishment */}
+
           <motion.div
             initial={{ opacity: 0, x: 35 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -269,6 +271,7 @@ export default function AboutSection() {
                   <p className="text-xs uppercase tracking-widest text-white/35">
                     Founded In
                   </p>
+
                   <p className="mt-2 text-lg font-bold text-white">
                     Hyderabad, India
                   </p>
@@ -278,6 +281,7 @@ export default function AboutSection() {
                   <p className="text-xs uppercase tracking-widest text-white/35">
                     Founder
                   </p>
+
                   <p className="mt-2 text-lg font-bold text-white">
                     Mohammed Khan
                   </p>
@@ -287,6 +291,7 @@ export default function AboutSection() {
                   <p className="text-xs uppercase tracking-widest text-white/35">
                     Focus
                   </p>
+
                   <p className="mt-2 text-lg font-bold text-white">
                     Software • AI • Digital Solutions
                   </p>
@@ -296,9 +301,7 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* ========================================================= */}
         {/* FOUNDER */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -308,7 +311,9 @@ export default function AboutSection() {
           className="mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-r from-white/[0.045] via-purple-500/[0.035] to-amber-500/[0.04] backdrop-blur-2xl"
         >
           <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
+
             {/* Founder Identity */}
+
             <div className="relative overflow-hidden border-b border-white/10 p-8 lg:border-b-0 lg:border-r sm:p-10">
               <div className="absolute left-0 top-0 h-48 w-48 rounded-full bg-amber-400/10 blur-3xl" />
 
@@ -341,6 +346,7 @@ export default function AboutSection() {
                   className="group mt-8 inline-flex items-center gap-2 rounded-xl border border-amber-300/20 bg-amber-300/[0.07] px-5 py-3 text-sm font-bold text-amber-200 transition hover:border-amber-300/40 hover:bg-amber-300/10"
                 >
                   Visit Founder Profile
+
                   <ArrowUpRight
                     className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     size={17}
@@ -350,6 +356,7 @@ export default function AboutSection() {
             </div>
 
             {/* Founder Highlights */}
+
             <div className="p-8 sm:p-10">
               <p className="text-sm leading-7 text-white/55">
                 STACKRA combines software engineering with practical business
@@ -376,9 +383,7 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* ========================================================= */}
         {/* PROBLEMS */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -395,7 +400,7 @@ export default function AboutSection() {
             </div>
 
             <h3 className="text-3xl font-black sm:text-4xl lg:text-5xl">
-              We Don't Just Build Software.
+              We Don&apos;t Just Build Software.
               <span className="block text-white/45">
                 We Solve Business Problems.
               </span>
@@ -439,9 +444,7 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
 
-        {/* ========================================================= */}
         {/* WHAT WE BUILD */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -471,6 +474,7 @@ export default function AboutSection() {
               className="group inline-flex shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold text-white/80 transition hover:border-amber-300/30 hover:text-amber-200"
             >
               Explore Solutions
+
               <ArrowRight
                 size={17}
                 className="transition group-hover:translate-x-1"
@@ -527,9 +531,7 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
 
-        {/* ========================================================= */}
         {/* TECHNOLOGY PHILOSOPHY */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
@@ -580,7 +582,9 @@ export default function AboutSection() {
                   key={item.title}
                   className="rounded-2xl border border-white/10 bg-black/20 p-6 text-left"
                 >
-                  <h4 className="font-black text-white">{item.title}</h4>
+                  <h4 className="font-black text-white">
+                    {item.title}
+                  </h4>
 
                   <p className="mt-3 text-sm leading-7 text-white/45">
                     {item.text}
@@ -591,9 +595,7 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* ========================================================= */}
         {/* FINAL CTA */}
-        {/* ========================================================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -617,8 +619,8 @@ export default function AboutSection() {
               </h3>
 
               <p className="mt-5 max-w-2xl text-sm leading-8 text-white/50 sm:text-base">
-                Let's turn your business challenge into a practical technology
-                solution built around your goals.
+                Let&apos;s turn your business challenge into a practical
+                technology solution built around your goals.
               </p>
             </div>
 
@@ -628,6 +630,7 @@ export default function AboutSection() {
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 px-6 py-3.5 text-sm font-black text-black shadow-xl shadow-amber-500/10 transition hover:-translate-y-1 hover:shadow-amber-500/25"
               >
                 Start Your Project
+
                 <ArrowRight
                   size={17}
                   className="transition group-hover:translate-x-1"
