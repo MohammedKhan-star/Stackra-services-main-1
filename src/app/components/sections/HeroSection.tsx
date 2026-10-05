@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -42,6 +42,31 @@ const technologies = [
     description:
       "Modern, responsive and scalable digital experiences for your business.",
   },
+];
+
+/* =========================================================
+   TOP COMPANY / SERVICES MARQUEE
+========================================================= */
+
+const marqueeItems = [
+  "STACKRA TECHNOLOGIES",
+  "STACKRA ACADEMY",
+  "SERVICES",
+  "WEB APP",
+  "WEB DEVELOPMENT",
+  "CUSTOM SOFTWARE",
+  "AI SOLUTIONS",
+  "MOBILE APP",
+  "CRM",
+  "ERP",
+  "E-COMMERCE",
+  "CLOUD SOLUTIONS",
+  "DIGITAL MARKETING",
+  "STACKRA BOOKS",
+  "STACKRA BLOGS",
+  "BUSINESS AUTOMATION",
+  "SOFTWARE DEVELOPMENT",
+  "DIGITAL SOLUTIONS",
 ];
 
 /* =========================================================
@@ -156,7 +181,7 @@ const particles = [
    HERO ANIMATION VARIANTS
 ========================================================= */
 
-const contentVariants: Variants = {
+const contentVariants = {
   hidden: {},
   visible: {
     transition: {
@@ -165,7 +190,7 @@ const contentVariants: Variants = {
   },
 };
 
-const fadeUpVariants: Variants = {
+const fadeUpVariants = {
   hidden: {
     opacity: 0,
     y: 25,
@@ -182,7 +207,7 @@ const fadeUpVariants: Variants = {
   },
 };
 
-const titleVariants: Variants = {
+const titleVariants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -209,15 +234,66 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-screen overflow-hidden bg-black text-white"
+      className="relative isolate min-h-screen overflow-hidden text-white"
     >
       {/* =====================================================
-          DESKTOP BACKGROUND
-          
-          Desktop:
-          /public/bg/hero-back-3.png
+          TOP COMPANY / SERVICES MARQUEE
 
-          This image is shown from md and above.
+          RIGHT → LEFT
+      ===================================================== */}
+
+      <div className="absolute left-0 right-0 top-0 z-[100] overflow-hidden border-b border-white/20 bg-black/10 backdrop-blur-sm">
+        <div className="relative flex h-12 items-center overflow-hidden">
+          <motion.div
+            animate={{
+              x: ["0%", "-50%"],
+            }}
+            transition={{
+              duration: 34,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="flex w-max items-center whitespace-nowrap"
+          >
+            {/* FIRST SET */}
+
+            {marqueeItems.map((item, index) => (
+              <div
+                key={`marquee-${index}`}
+                className="flex items-center"
+              >
+                <span className="px-6 text-[9px] font-bold uppercase tracking-[0.22em] text-white/90 sm:px-8 sm:text-[10px]">
+                  {item}
+                </span>
+
+                <span className="h-1 w-1 rounded-full bg-white/80" />
+              </div>
+            ))}
+
+            {/* SECOND SET
+                Needed for seamless infinite animation
+            */}
+
+            {marqueeItems.map((item, index) => (
+              <div
+                key={`marquee-repeat-${index}`}
+                className="flex items-center"
+              >
+                <span className="px-6 text-[9px] font-bold uppercase tracking-[0.22em] text-white/90 sm:px-8 sm:text-[10px]">
+                  {item}
+                </span>
+
+                <span className="h-1 w-1 rounded-full bg-white/80" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* =====================================================
+          DESKTOP BACKGROUND
+
+          /public/bg/hero-back-3.png
       ===================================================== */}
 
       <div className="absolute inset-0 -z-50 hidden md:block">
@@ -234,11 +310,8 @@ export default function HeroSection() {
 
       {/* =====================================================
           MOBILE BACKGROUND
-          
-          Mobile:
-          /public/bg/hero-back-mobile.png
 
-          This is a completely separate mobile image.
+          /public/bg/hero-back-mobile.png
       ===================================================== */}
 
       <div className="absolute inset-0 -z-50 block md:hidden">
@@ -254,16 +327,10 @@ export default function HeroSection() {
       </div>
 
       {/* =====================================================
-          NO BACKGROUND COLOR OVERLAY
-
-          The actual background image remains visible.
-      ===================================================== */}
-
-      {/* =====================================================
           MAIN CONTENT
       ===================================================== */}
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-28 pt-28 sm:px-8 sm:pt-32 lg:px-10 lg:pt-32">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-28 pt-36 sm:px-8 sm:pt-40 lg:px-10 lg:pt-40">
         <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           {/* =================================================
               LEFT CONTENT
@@ -442,9 +509,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* =================================================
-              PREMIUM TECHNOLOGY VISUAL
-
-              Responsive on every device.
+              TECHNOLOGY VISUAL
           ================================================= */}
 
           <motion.div
@@ -592,8 +657,6 @@ export default function HeroSection() {
               }}
               className="absolute left-1/2 top-1/2 z-30 flex h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[2rem] border border-white/25 bg-black/70 shadow-[0_30px_100px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:h-[195px] sm:w-[195px] sm:rounded-[2.5rem] lg:h-56 lg:w-56 lg:rounded-[3rem]"
             >
-              {/* Core border */}
-
               <motion.div
                 animate={{
                   opacity: [0.25, 0.6, 0.25],
@@ -604,8 +667,6 @@ export default function HeroSection() {
                 }}
                 className="absolute inset-2.5 rounded-[1.6rem] border border-white/20 sm:inset-3 sm:rounded-[2rem] lg:rounded-[2.5rem]"
               />
-
-              {/* Core */}
 
               <div className="relative text-center">
                 <motion.div
@@ -714,8 +775,6 @@ export default function HeroSection() {
                   }}
                   className={`absolute ${card.position} z-50 w-[145px] overflow-hidden rounded-xl border border-white/20 bg-black/60 p-2.5 shadow-2xl backdrop-blur-xl sm:w-48 sm:rounded-2xl sm:p-3.5 lg:w-52 lg:p-4`}
                 >
-                  {/* White moving highlight */}
-
                   <motion.div
                     animate={{
                       x: ["-100%", "100%"],

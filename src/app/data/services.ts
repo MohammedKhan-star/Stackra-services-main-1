@@ -1,43 +1,5 @@
 const services = [
-  {
-    id: "web-development",
-    slug: "web-development",
-    category: "Web & Digital",
-    badge: "WEB DEVELOPMENT",
-    shortTitle: "Modern Web Development",
-    title: "Web Development",
-    icon: "Globe2",
-    image: "/services/webdevelopment.png",
-    featured: true,
-
-    desc: "Build fast, scalable, secure, and responsive websites and web applications designed to strengthen your digital presence and grow your business.",
-
-    points: [
-      "Business Websites",
-      "Corporate Websites",
-      "Custom Web Applications",
-      "SEO Optimized",
-      "Mobile Responsive",
-      "High Performance",
-    ],
-
-    technologies: [
-      "Next.js",
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Node.js",
-    ],
-
-    stats: [
-      { label: "Responsive", value: "100%" },
-      { label: "SEO Ready", value: "Yes" },
-      { label: "Performance", value: "High" },
-    ],
-
-    gradient: "from-blue-500/20 via-cyan-500/10 to-transparent",
-  },
+ 
 
   {
     id: "portfolio-websites",

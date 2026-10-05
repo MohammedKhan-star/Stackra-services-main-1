@@ -14,6 +14,8 @@ import VideosSection from "./components/sections/VideosSection";
 import SolutionsSection from "./components/sections/SolutionsSection";
 
 import WhatsAppButton from "./components/ui/WhatsAppButton";
+import QuotationButton from "./components/ui/QuotationButton";
+import Chatbot from "./components/ui/Chatbot";
 
 export default function Home() {
   return (
@@ -109,9 +111,17 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          FLOATING WHATSAPP
+          CLIENT TOOLS
       ========================================= */}
+
+      {/* Quotation */}
+      
+
+      {/* WhatsApp */}
       <WhatsAppButton />
+
+      {/* AI Chatbot */}
+      <Chatbot />
 
       {/* =========================================
           FOOTER

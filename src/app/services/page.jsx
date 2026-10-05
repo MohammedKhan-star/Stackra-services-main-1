@@ -1,26 +1,20 @@
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-
 import {
   ArrowUpRight,
   CheckCircle2,
   Sparkles,
-  Tag,
-  LayoutTemplate,
 } from "lucide-react";
 
-import services from "../../data/services";
+import services from "../data/services";
 
 export default function ServicesSection() {
   return (
     <section className="relative overflow-hidden bg-slate-50 py-24 sm:py-28 lg:py-32">
-
-      {/* =========================
-          BACKGROUND EFFECTS
-      ========================== */}
-
+      {/* Background Effects */}
       <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-indigo-200/30 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-blue-200/30 blur-3xl" />
@@ -53,7 +47,6 @@ export default function ServicesSection() {
             software, and AI-powered solutions that help organizations
             automate operations, improve efficiency, and scale with confidence.
           </p>
-
         </div>
 
         {/* =========================
@@ -65,7 +58,7 @@ export default function ServicesSection() {
           {services.map((service) => {
 
             /*
-             * Every service should have a slug.
+             * Every service must have a slug.
              *
              * Example:
              * title: "School Website Development"
@@ -128,9 +121,11 @@ export default function ServicesSection() {
                   {/* Category */}
 
                   <div className="absolute bottom-5 left-5">
+
                     <span className="rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-[11px] font-bold tracking-[0.15em] text-white backdrop-blur-md">
                       {service.badge || service.category}
                     </span>
+
                   </div>
 
                   {/* =========================
@@ -158,7 +153,8 @@ export default function ServicesSection() {
                   <div className="mb-3">
 
                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-600">
-                      {service.shortTitle || service.category}
+                      {service.shortTitle ||
+                        service.category}
                     </p>
 
                     <h3 className="text-xl font-bold tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-indigo-600">
@@ -260,48 +256,12 @@ export default function ServicesSection() {
                   )}
 
                   {/* =========================
-                      PRICE + TEMPLATE BUTTONS
-                  ========================== */}
-
-                  <div className="mt-7 grid grid-cols-2 gap-3">
-
-                    {/* PRICE */}
-
-                    <Link
-                      href={`${serviceUrl}#pricing`}
-                      className="group/price inline-flex items-center justify-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-700 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white hover:shadow-lg"
-                    >
-                      <Tag
-                        size={17}
-                        className="transition-transform duration-300 group-hover/price:scale-110"
-                      />
-
-                      <span>View Price</span>
-                    </Link>
-
-                    {/* TEMPLATE */}
-
-                    <Link
-                      href={`${serviceUrl}#template`}
-                      className="group/template inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-lg"
-                    >
-                      <LayoutTemplate
-                        size={17}
-                        className="transition-transform duration-300 group-hover/template:scale-110"
-                      />
-
-                      <span>Template</span>
-                    </Link>
-
-                  </div>
-
-                  {/* =========================
-                      EXPLORE SOLUTION
+                      EXPLORE SOLUTION CTA
                   ========================== */}
 
                   <Link
                     href={serviceUrl}
-                    className="mt-4 flex items-center justify-between rounded-xl border border-transparent px-1 py-2"
+                    className="mt-7 flex items-center justify-between"
                   >
 
                     <span className="text-sm font-semibold text-slate-900 transition-colors duration-300 group-hover:text-indigo-600">
