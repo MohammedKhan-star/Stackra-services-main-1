@@ -11,12 +11,11 @@ import {
   LayoutTemplate,
 } from "lucide-react";
 
-import services from "../../data/services";
+import services from "../../../data/services";
 
 export default function ServicesSection() {
   return (
     <section className="relative overflow-hidden bg-slate-50 py-24 sm:py-28 lg:py-32">
-
       {/* =========================
           BACKGROUND EFFECTS
       ========================== */}
@@ -28,13 +27,11 @@ export default function ServicesSection() {
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-200/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-
         {/* =========================
             SECTION HEADER
         ========================== */}
 
         <div className="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
-
           <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold tracking-wide text-indigo-700 shadow-sm">
             <Sparkles size={16} />
             WHAT WE DO
@@ -53,7 +50,6 @@ export default function ServicesSection() {
             software, and AI-powered solutions that help organizations
             automate operations, improve efficiency, and scale with confidence.
           </p>
-
         </div>
 
         {/* =========================
@@ -61,20 +57,7 @@ export default function ServicesSection() {
         ========================== */}
 
         <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-
           {services.map((service) => {
-
-            /*
-             * Every service should have a slug.
-             *
-             * Example:
-             * title: "School Website Development"
-             * slug: "school-website-development"
-             *
-             * Result:
-             * /services/school-website-development
-             */
-
             const serviceSlug =
               service.slug ||
               service.title
@@ -88,14 +71,9 @@ export default function ServicesSection() {
 
             return (
               <article
-                key={
-                  service.id ||
-                  service.slug ||
-                  service.title
-                }
+                key={service.id || service.slug || service.title}
                 className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-indigo-200 hover:shadow-2xl"
               >
-
                 {/* =========================
                     FEATURED BADGE
                 ========================== */}
@@ -112,7 +90,6 @@ export default function ServicesSection() {
                 ========================== */}
 
                 <div className="relative h-56 w-full overflow-hidden bg-slate-100">
-
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -121,11 +98,7 @@ export default function ServicesSection() {
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
 
-                  {/* Gradient Overlay */}
-
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent" />
-
-                  {/* Category */}
 
                   <div className="absolute bottom-5 left-5">
                     <span className="rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-[11px] font-bold tracking-[0.15em] text-white backdrop-blur-md">
@@ -144,7 +117,6 @@ export default function ServicesSection() {
                   >
                     <ArrowUpRight size={20} />
                   </Link>
-
                 </div>
 
                 {/* =========================
@@ -152,11 +124,9 @@ export default function ServicesSection() {
                 ========================== */}
 
                 <div className="p-6 sm:p-7">
-
                   {/* Title */}
 
                   <div className="mb-3">
-
                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-600">
                       {service.shortTitle || service.category}
                     </p>
@@ -164,7 +134,6 @@ export default function ServicesSection() {
                     <h3 className="text-xl font-bold tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-indigo-600">
                       {service.title}
                     </h3>
-
                   </div>
 
                   {/* Description */}
@@ -179,25 +148,19 @@ export default function ServicesSection() {
 
                   {service.points?.length > 0 && (
                     <div className="mt-6 space-y-3 border-t border-slate-100 pt-6">
+                      {service.points.slice(0, 6).map((point) => (
+                        <div
+                          key={point}
+                          className="flex items-start gap-2.5 text-sm text-slate-700"
+                        >
+                          <CheckCircle2
+                            size={17}
+                            className="mt-0.5 shrink-0 text-indigo-600"
+                          />
 
-                      {service.points
-                        .slice(0, 6)
-                        .map((point) => (
-                          <div
-                            key={point}
-                            className="flex items-start gap-2.5 text-sm text-slate-700"
-                          >
-
-                            <CheckCircle2
-                              size={17}
-                              className="mt-0.5 shrink-0 text-indigo-600"
-                            />
-
-                            <span>{point}</span>
-
-                          </div>
-                        ))}
-
+                          <span>{point}</span>
+                        </div>
+                      ))}
                     </div>
                   )}
 
@@ -207,26 +170,20 @@ export default function ServicesSection() {
 
                   {service.technologies?.length > 0 && (
                     <div className="mt-6 border-t border-slate-100 pt-5">
-
                       <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
                         Technology
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-
-                        {service.technologies
-                          .slice(0, 4)
-                          .map((technology) => (
-                            <span
-                              key={technology}
-                              className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-medium text-slate-600 transition-colors duration-300 group-hover:border-indigo-100 group-hover:bg-indigo-50 group-hover:text-indigo-600"
-                            >
-                              {technology}
-                            </span>
-                          ))}
-
+                        {service.technologies.slice(0, 4).map((technology) => (
+                          <span
+                            key={technology}
+                            className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-medium text-slate-600 transition-colors duration-300 group-hover:border-indigo-100 group-hover:bg-indigo-50 group-hover:text-indigo-600"
+                          >
+                            {technology}
+                          </span>
+                        ))}
                       </div>
-
                     </div>
                   )}
 
@@ -236,26 +193,20 @@ export default function ServicesSection() {
 
                   {service.stats?.length > 0 && (
                     <div className="mt-6 grid grid-cols-3 gap-2 border-t border-slate-100 pt-5">
-
-                      {service.stats
-                        .slice(0, 3)
-                        .map((stat) => (
-                          <div
-                            key={stat.label}
-                            className="rounded-xl bg-slate-50 p-3 text-center transition-colors duration-300 group-hover:bg-indigo-50/60"
-                          >
-
-                            <div className="text-sm font-bold text-slate-900">
-                              {stat.value}
-                            </div>
-
-                            <div className="mt-1 text-[9px] font-medium uppercase tracking-wide text-slate-400">
-                              {stat.label}
-                            </div>
-
+                      {service.stats.slice(0, 3).map((stat) => (
+                        <div
+                          key={stat.label}
+                          className="rounded-xl bg-slate-50 p-3 text-center transition-colors duration-300 group-hover:bg-indigo-50/60"
+                        >
+                          <div className="text-sm font-bold text-slate-900">
+                            {stat.value}
                           </div>
-                        ))}
 
+                          <div className="mt-1 text-[9px] font-medium uppercase tracking-wide text-slate-400">
+                            {stat.label}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
 
@@ -264,7 +215,6 @@ export default function ServicesSection() {
                   ========================== */}
 
                   <div className="mt-7 grid grid-cols-2 gap-3">
-
                     {/* PRICE */}
 
                     <Link
@@ -281,18 +231,39 @@ export default function ServicesSection() {
 
                     {/* TEMPLATE */}
 
-                    <Link
-                      href={`${serviceUrl}#template`}
-                      className="group/template inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-lg"
-                    >
-                      <LayoutTemplate
-                        size={17}
-                        className="transition-transform duration-300 group-hover/template:scale-110"
-                      />
+                    {service.templateUrl ? (
+                      <a
+                        href={service.templateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${service.title} template`}
+                        className="group/template inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-lg"
+                      >
+                        <LayoutTemplate
+                          size={17}
+                          className="transition-transform duration-300 group-hover/template:scale-110"
+                        />
 
-                      <span>Template</span>
-                    </Link>
+                        <span>View Template</span>
 
+                        <ArrowUpRight
+                          size={15}
+                          className="transition-transform duration-300 group-hover/template:translate-x-0.5 group-hover/template:-translate-y-0.5"
+                        />
+                      </a>
+                    ) : (
+                      <Link
+                        href={`${serviceUrl}#template`}
+                        className="group/template inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-lg"
+                      >
+                        <LayoutTemplate
+                          size={17}
+                          className="transition-transform duration-300 group-hover/template:scale-110"
+                        />
+
+                        <span>Template</span>
+                      </Link>
+                    )}
                   </div>
 
                   {/* =========================
@@ -303,7 +274,6 @@ export default function ServicesSection() {
                     href={serviceUrl}
                     className="mt-4 flex items-center justify-between rounded-xl border border-transparent px-1 py-2"
                   >
-
                     <span className="text-sm font-semibold text-slate-900 transition-colors duration-300 group-hover:text-indigo-600">
                       Explore Solution
                     </span>
@@ -311,9 +281,7 @@ export default function ServicesSection() {
                     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition-all duration-300 group-hover:bg-indigo-600 group-hover:text-white">
                       <ArrowUpRight size={17} />
                     </span>
-
                   </Link>
-
                 </div>
 
                 {/* =========================
@@ -321,11 +289,9 @@ export default function ServicesSection() {
                 ========================== */}
 
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 transition-all duration-500 group-hover:w-full" />
-
               </article>
             );
           })}
-
         </div>
 
         {/* =========================
@@ -333,7 +299,6 @@ export default function ServicesSection() {
         ========================== */}
 
         <div className="mt-16 text-center lg:mt-20">
-
           <p className="mb-4 text-sm text-slate-500">
             Looking for a custom technology solution?
           </p>
@@ -346,9 +311,7 @@ export default function ServicesSection() {
 
             <ArrowUpRight size={18} />
           </a>
-
         </div>
-
       </div>
     </section>
   );

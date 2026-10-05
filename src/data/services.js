@@ -1,30 +1,5 @@
 const services = [
-  {
-    slug: "web-development",
-    title: "Web Development",
-    shortTitle: "Web Development",
-    category: "Website Solutions",
-    badge: "Professional Web Solutions",
-    desc: "Modern, responsive and high-performance websites for businesses and individuals.",
-    image: "services/web-development.jpg",
 
-    points: [
-      "Responsive Website Design",
-      "Modern UI/UX",
-      "Mobile Optimization",
-      "SEO-Friendly Structure",
-      "Fast Performance",
-      "Deployment Support",
-    ],
-
-    technologies: [
-      "Next.js",
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "MongoDB",
-    ],
-  },
 
   {
     slug: "portfolio-websites",
@@ -34,6 +9,8 @@ const services = [
     badge: "Personal Branding",
     desc: "Professional portfolio websites for students, developers, creators and professionals.",
     image: "/services/potfilo.png",
+
+    templateUrl: "https://www.mohammedkhan.dev/",
 
     points: [
       "Professional Portfolio",
@@ -61,6 +38,8 @@ const services = [
     desc: "Professional websites designed to establish and grow your business online.",
     image: "/services/businesslanding.png",
 
+    templateUrl: "",
+
     points: [
       "Professional Business Website",
       "Company Profile",
@@ -86,7 +65,10 @@ const services = [
     category: "Education Solutions",
     badge: "Education Solutions",
     desc: "Digital solutions for schools, colleges, academies and educational institutions.",
-    image: "/services/education.jpg",
+    image: "/services/education-1.jpg",
+
+    // Your school template
+    templateUrl: "https://stackra-school-web-gamma.vercel.app",
 
     points: [
       "School Website",
@@ -115,6 +97,8 @@ const services = [
     desc: "Complete online learning platforms for schools, academies and training institutes.",
     image: "/services/LMS.png",
 
+    templateUrl: "https://lms-sandy-six.vercel.app/",
+
     points: [
       "Course Management",
       "Student Management",
@@ -133,32 +117,7 @@ const services = [
     ],
   },
 
-  {
-    slug: "restaurant-food-solutions",
-    title: "Restaurant & Food Solutions",
-    shortTitle: "Restaurant Solutions",
-    category: "Food & Restaurant",
-    badge: "Food Technology",
-    desc: "Digital solutions for restaurants, cafes, hotels and food businesses.",
-    image: "/services/restaurant.jpg",
 
-    points: [
-      "Restaurant Website",
-      "Digital Menu",
-      "Online Ordering",
-      "WhatsApp Ordering",
-      "Food Gallery",
-      "Customer Enquiry",
-    ],
-
-    technologies: [
-      "Next.js",
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "MongoDB",
-    ],
-  },
 
   {
     slug: "ecommerce-solutions",
@@ -168,6 +127,8 @@ const services = [
     badge: "Online Store",
     desc: "Complete ecommerce websites for businesses that want to sell products online.",
     image: "/services/e-commerce.png",
+
+    templateUrl: "https://gocart-xqlp.vercel.app/",
 
     points: [
       "Product Catalogue",
@@ -186,7 +147,34 @@ const services = [
       "MongoDB",
     ],
   },
+  {
+    slug: "restaurant-food-solutions",
+    title: "Restaurant & Food Solutions",
+    shortTitle: "Restaurant Solutions",
+    category: "Food & Restaurant",
+    badge: "Food Technology",
+    desc: "Digital solutions for restaurants, cafes, hotels and food businesses.",
+    image: "/services/restaurant.jpg",
 
+    templateUrl: "https://food-delivery-app-zomoto.vercel.app/",
+
+    points: [
+      "Restaurant Website",
+      "Digital Menu",
+      "Online Ordering",
+      "WhatsApp Ordering",
+      "Food Gallery",
+      "Customer Enquiry",
+    ],
+
+    technologies: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "MongoDB",
+    ],
+  },
   {
     slug: "crm-solutions",
     title: "CRM Solutions",
@@ -195,6 +183,8 @@ const services = [
     badge: "Customer Management",
     desc: "Customer relationship management systems for managing leads, customers and sales.",
     image: "/services/CRM.png",
+
+    templateUrl: "",
 
     points: [
       "Customer Management",
@@ -223,6 +213,8 @@ const services = [
     desc: "Integrated business management solutions for organizations and growing companies.",
     image: "/services/erp.png",
 
+    templateUrl: "",
+
     points: [
       "Customer Management",
       "Product Management",
@@ -249,6 +241,8 @@ const services = [
     badge: "Team Productivity",
     desc: "Project and task management systems for teams and organizations.",
     image: "/services/project-management.png",
+
+    templateUrl: "https://stackra-pms.vercel.app/",
 
     points: [
       "Project Dashboard",
