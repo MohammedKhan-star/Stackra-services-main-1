@@ -189,6 +189,7 @@ const contentVariants = {
     },
   },
 };
+
 const fadeUpVariants = {
   hidden: {
     opacity: 0,
@@ -210,15 +211,13 @@ const titleVariants = {
     y: 40,
     filter: "blur(8px)",
   },
-
   visible: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-
     transition: {
       duration: 1,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -235,7 +234,6 @@ export default function HeroSection() {
     >
       {/* =====================================================
           TOP COMPANY / SERVICES MARQUEE
-
           RIGHT → LEFT
       ===================================================== */}
 
@@ -289,7 +287,6 @@ export default function HeroSection() {
 
       {/* =====================================================
           DESKTOP BACKGROUND
-
           /public/bg/hero-back-3.png
       ===================================================== */}
 
@@ -307,7 +304,6 @@ export default function HeroSection() {
 
       {/* =====================================================
           MOBILE BACKGROUND
-
           /public/bg/hero-back-mobile.png
       ===================================================== */}
 
@@ -329,9 +325,8 @@ export default function HeroSection() {
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-28 pt-36 sm:px-8 sm:pt-40 lg:px-10 lg:pt-40">
         <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-          {/* =================================================
-              LEFT CONTENT
-          ================================================= */}
+
+          {/* LEFT CONTENT */}
 
           <motion.div
             initial="hidden"
@@ -339,9 +334,7 @@ export default function HeroSection() {
             variants={contentVariants}
             className="relative z-20 max-w-4xl"
           >
-            {/* =================================================
-                TOP BADGE
-            ================================================= */}
+            {/* TOP BADGE */}
 
             <motion.div
               variants={fadeUpVariants}
@@ -349,7 +342,6 @@ export default function HeroSection() {
             >
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute h-full w-full animate-ping rounded-full bg-white/60" />
-
                 <span className="relative h-2.5 w-2.5 rounded-full bg-white" />
               </span>
 
@@ -363,22 +355,17 @@ export default function HeroSection() {
               </span>
             </motion.div>
 
-            {/* =================================================
-                MAIN HEADING
-            ================================================= */}
+            {/* MAIN HEADING */}
 
             <motion.h1
               variants={titleVariants}
               className="max-w-5xl text-[3.15rem] font-black leading-[0.94] tracking-[-0.065em] sm:text-6xl md:text-7xl lg:text-[5.7rem]"
             >
               Building the
-
               <br />
-
               <span className="text-white">
                 Future With
               </span>
-
               <br />
 
               <motion.span
@@ -396,9 +383,7 @@ export default function HeroSection() {
               </motion.span>
             </motion.h1>
 
-            {/* =================================================
-                WHITE ACCENT
-            ================================================= */}
+            {/* WHITE ACCENT */}
 
             <motion.div
               initial={{
@@ -429,9 +414,7 @@ export default function HeroSection() {
               />
             </motion.div>
 
-            {/* =================================================
-                DESCRIPTION
-            ================================================= */}
+            {/* DESCRIPTION */}
 
             <motion.p
               variants={fadeUpVariants}
@@ -442,9 +425,7 @@ export default function HeroSection() {
               simplify operations and grow in the digital world.
             </motion.p>
 
-            {/* =================================================
-                CTA BUTTONS
-            ================================================= */}
+            {/* CTA BUTTONS */}
 
             <motion.div
               variants={fadeUpVariants}
@@ -477,9 +458,7 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* =================================================
-                TRUST
-            ================================================= */}
+            {/* TRUST */}
 
             <motion.div
               variants={fadeUpVariants}
@@ -505,9 +484,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* =================================================
-              TECHNOLOGY VISUAL
-          ================================================= */}
+          {/* TECHNOLOGY VISUAL */}
 
           <motion.div
             initial={{
@@ -527,9 +504,7 @@ export default function HeroSection() {
             }}
             className="relative mx-auto flex h-[390px] w-full max-w-[430px] items-center justify-center sm:h-[500px] sm:max-w-[540px] lg:h-[620px] lg:max-w-none"
           >
-            {/* =================================================
-                OUTER ORBIT
-            ================================================= */}
+            {/* OUTER ORBIT */}
 
             <motion.div
               animate={{
@@ -555,13 +530,10 @@ export default function HeroSection() {
               />
 
               <span className="absolute bottom-[11%] right-[10%] h-2 w-2 rounded-full bg-white/80" />
-
               <span className="absolute left-[9%] top-[31%] h-2 w-2 rounded-full bg-white/70" />
             </motion.div>
 
-            {/* =================================================
-                SECOND ORBIT
-            ================================================= */}
+            {/* SECOND ORBIT */}
 
             <motion.div
               animate={{
@@ -575,9 +547,7 @@ export default function HeroSection() {
               className="absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15 border-dashed sm:h-[315px] sm:w-[315px] lg:h-[375px] lg:w-[375px]"
             />
 
-            {/* =================================================
-                INNER ORBIT
-            ================================================= */}
+            {/* INNER ORBIT */}
 
             <motion.div
               animate={{
@@ -590,7 +560,6 @@ export default function HeroSection() {
                   repeat: Infinity,
                   ease: "linear",
                 },
-
                 scale: {
                   duration: 4,
                   repeat: Infinity,
@@ -600,9 +569,7 @@ export default function HeroSection() {
               className="absolute left-1/2 top-1/2 h-[165px] w-[165px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15 sm:h-[225px] sm:w-[225px] lg:h-[270px] lg:w-[270px]"
             />
 
-            {/* =================================================
-                CONNECTION LINES
-            ================================================= */}
+            {/* CONNECTION LINES */}
 
             <div className="absolute left-1/2 top-1/2 z-10 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 sm:h-[315px] sm:w-[315px] lg:h-[375px] lg:w-[375px]">
               <motion.div
@@ -639,9 +606,7 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* =================================================
-                CENTRAL CORE
-            ================================================= */}
+            {/* CENTRAL CORE */}
 
             <motion.div
               animate={{
@@ -698,9 +663,7 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* =================================================
-                ORBIT NODES
-            ================================================= */}
+            {/* ORBIT NODES */}
 
             {orbitNodes.map((node, index) => {
               const Icon = node.icon;
@@ -730,9 +693,7 @@ export default function HeroSection() {
               );
             })}
 
-            {/* =================================================
-                FLOATING INFORMATION CARDS
-            ================================================= */}
+            {/* FLOATING INFORMATION CARDS */}
 
             {floatingCards.map((card, index) => {
               const Icon = card.icon;
@@ -758,12 +719,10 @@ export default function HeroSection() {
                       duration: 0.8,
                       delay: 0.8 + index * 0.15,
                     },
-
                     x: {
                       duration: 0.8,
                       delay: 0.8 + index * 0.15,
                     },
-
                     y: {
                       duration: 4 + index,
                       repeat: Infinity,
@@ -807,9 +766,7 @@ export default function HeroSection() {
               );
             })}
 
-            {/* =================================================
-                VISUAL LABEL
-            ================================================= */}
+            {/* VISUAL LABEL */}
 
             <motion.div
               animate={{
@@ -830,9 +787,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* =========================================================
-          MOBILE TECHNOLOGY CARDS
-      ========================================================= */}
+      {/* MOBILE TECHNOLOGY CARDS */}
 
       <div className="relative z-20 mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:hidden">
         <div className="grid gap-4 sm:grid-cols-3">
@@ -890,9 +845,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* =========================================================
-          BOTTOM BRAND BAR
-      ========================================================= */}
+      {/* BOTTOM BRAND BAR */}
 
       <div className="absolute bottom-0 left-0 right-0 z-30 border-t border-white/15 bg-black/35 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
@@ -926,9 +879,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* =========================================================
-          SIDE LABEL
-      ========================================================= */}
+      {/* SIDE LABEL */}
 
       <div className="absolute right-5 top-1/2 z-30 hidden -translate-y-1/2 xl:block">
         <div className="flex items-center gap-3 [writing-mode:vertical-rl]">
@@ -940,9 +891,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* =========================================================
-          SCROLL INDICATOR
-      ========================================================= */}
+      {/* SCROLL INDICATOR */}
 
       <motion.div
         initial={{
