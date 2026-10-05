@@ -12,9 +12,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-import services from "../../../../../../data/services";
-import servicePackages from "../../../../../../data/servicePackages";
-
+import services from "../../../../../data/services";
+import servicePackages from "../../../../../data/servicePackages";
 export default function TemplatePage() {
   const params = useParams();
 
